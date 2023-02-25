@@ -1,0 +1,33 @@
+public class Main {
+    public static void main(String[] args) {
+        Fish d = new Fish();
+        Cat c = new Cat("Fluffy");
+        Animal e = new Spider();
+        Animal a = new Fish();
+        Pet p = new Cat();
+
+        d.eat();
+        c.eat();
+        e.eat();
+        a.eat();
+        p.play();
+
+
+        // Casting objects
+        ((Spider) e).eat();
+        ((Cat) p).eat();
+
+        // Using polymorphism
+        Animal animal1 = new Spider();
+        Animal animal2 = new Fish();
+        Pet pet1 = new Cat("Mittens");
+
+        animal1.walk();
+        animal2.walk();
+        pet1.play();
+
+        // Using super to call superclass methods
+        c.walk(); 
+        ((Spider) e).walk();
+    }
+}
